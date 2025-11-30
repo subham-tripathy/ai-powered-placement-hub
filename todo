@@ -1,0 +1,6 @@
+- add upload resume opt in student's profile section
+- student can track their status
+- implement recommended job and recommended students section
+- add atleast 30 data for each of the tables: student, company
+- implement the reports feature for admins
+- implement skill gap analysis - first find for who this feature should be implemented

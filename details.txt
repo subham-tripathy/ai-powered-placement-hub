@@ -1,0 +1,195 @@
+# 📘 **Project Structure (With Easy + Moderate AI Features Implemented)**
+
+### **Project Title:** *AI-Powered Placement Hub (University-Level Platform)*
+
+### **Users:** TNP Members, Companies, Students
+
+---
+
+# 🧩 **1. System Overview**
+
+The system is a **university-level placement platform** designed to streamline communication and data flow between **TNP Members**, **Recruiting Companies**, and **Students**.
+AI is used for **resume parsing, job–student matching, candidate ranking, skill gap detection**, and **analytics generation**.
+Advanced features like mock interviews or placement predictions are **not included** in this scope.
+
+---
+
+# 👥 **2. User Roles & Responsibilities**
+
+## 🧑‍💼 **A. TNP Members (Admin/Core Role)**
+
+**Main Responsibilities:**
+
+* Add/invite companies and generate login credentials.
+* Upload/manage student profiles and resumes.
+* Create and schedule campus drives.
+* View AI-generated insights: skill gaps, placement analytics.
+* Export reports and monitor all placement activities.
+
+---
+
+## 🏢 **B. Companies / Recruiters**
+
+**Main Responsibilities:**
+
+* Login with TNP-generated credentials.
+* Post one or multiple job roles.
+* View AI-recommended candidates for each job.
+* Download resumes and shortlist students.
+* Submit results after the campus drive.
+
+---
+
+## 🎓 **C. Students**
+
+**Main Responsibilities:**
+
+* View personal profile and TNP-uploaded academic data.
+* Upload/update resume.
+* View eligible job openings.
+* Receive AI job recommendations and skill gap suggestions.
+* Track application and shortlist status.
+
+---
+
+# 🤖 **3. AI/ML Features Implemented (Easy + Moderate Only)**
+
+## 🟢 **EASY AI Features**
+
+### 1. **Basic Resume Parsing (NLP)**
+
+* Extracts text, skills, education, and tools from PDF resumes using TF-IDF/spaCy.
+* Converts unstructured resume text → structured profile data.
+
+### 2. **Skill Gap Detection (Keyword Matching)**
+
+* Compares job-required skills with student resume skills.
+* Highlights missing skills for students.
+
+### 3. **Rule-Based Job Recommendations (Student Module)**
+
+* Suggests jobs in which the student meets most requirements.
+* Based on skill overlap, CGPA, and eligibility rules.
+
+### 4. **Candidate Ranking (Company Module)**
+
+* Combines similarity score + CGPA to rank students.
+* Helps companies quickly shortlist top candidates.
+
+### 5. **AI Analytics Dashboard (TNP Module – Basic)**
+
+* Shows placement count, top skills, number of jobs, shortlists.
+* Aggregates data using simple statistical analysis.
+
+---
+
+## 🟡 **MODERATE AI Features**
+
+### 6. **NER-Based Resume Parsing (Enhanced NLP)**
+
+* Uses spaCy’s Named Entity Recognition to extract:
+
+  * Skills
+  * Projects
+  * Certifications
+  * Education
+  * Experience
+
+### 7. **Semantic Job–Resume Matching**
+
+* Converts job descriptions and resumes into embeddings (Sentence-BERT / TF-IDF vectors).
+* Calculates **cosine similarity** to measure job–candidate fit.
+
+### 8. **AI Job Recommendations (Semantic-Based)**
+
+* Recommends top N jobs to students based on semantic similarity.
+* Much more accurate than keyword matching.
+
+### 9. **Skill Gap Summary (TNP Analytics)**
+
+* AI identifies common missing skills across the student pool.
+* Helps TNP plan workshops or pre-placement training.
+
+### 10. **Resume Improvement Suggestions (Keyword Coverage)**
+
+* Highlights missing keywords or important skill terms.
+* Helps students refine resumes for better matching.
+
+---
+
+# 🏗️ **4. System Architecture (High-Level)**
+
+### **Frontend** (React + Tailwind)
+
+* TNP Dashboard
+* Company Dashboard
+* Student Dashboard
+* Job posting page
+* AI recommendation results
+* Resume upload page
+* Analytics charts
+
+### **Backend** (Node.js + Express)
+
+Handles:
+
+* Authentication (role-based)
+* CRUD operations (companies, jobs, students)
+* Drive scheduling
+* Shortlisting workflows
+
+### **AI/ML Engine** (Flask + Python)
+
+Exposes endpoints:
+
+* `/parse-resume` → NLP extraction
+* `/match-candidates` → AI job–resume similarity
+* `/skill-gap` → missing skills detection
+* `/recommend-jobs` → student job recommendations
+* `/analytics` → skill summaries
+
+### **Database** (MongoDB / PostgreSQL)
+
+Stores:
+
+* Students
+* Companies
+* Job postings
+* Parsed resume data
+* AI match scores
+* Drive details
+* Shortlists
+
+---
+
+# 📊 **5. Project Scope (Clearly Defined)**
+
+### **Features Included:**
+
+✔ Resume parsing
+✔ AI job–student matching
+✔ Candidate ranking
+✔ Job recommendations
+✔ Skill gap detection
+✔ Multiple roles posting per company
+✔ Placement analytics (basic)
+
+### **Features NOT Included (Future Scope):**
+
+✖ AI Mock Interviews
+✖ Voice-based analysis
+✖ Placement prediction ML model
+✖ Explainable AI (LIME/SHAP)
+✖ Bias detection
+
+---
+
+# 🎯 **6. What This Version of the Project Achieves**
+
+* Automates student–company matching.
+* Reduces manual resume screening for companies.
+* Helps students understand job suitability and missing skills.
+* Helps TNP with summarized placement analytics and skill gap insights.
+* Creates a structured, role-based, AI-supported placement ecosystem.
+
+---
